@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useState, useContext } from "react";
 import { CartContext } from "./CartContext";
 import Search from "./Search";
+
 export default function Header() {
     const { cartProducts } = useContext(CartContext);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +11,11 @@ export default function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+
+
     return (
         <header className="bg-[#222] text-white">
-            {showSearch && (<Search />)}
+            {showSearch && (<Search setS={setShowSearch}/>)}
             <div className="max-w-[800px] lg:max-w-[1000px] mx-auto px-[20px] py-[15px] flex justify-between md:w-full text-center flex-col md:flex-row">
                 <div>
                 <Link href={'/'} className="font-handjet text-2xl">TechKart</Link>
