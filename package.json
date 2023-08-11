@@ -33,8 +33,5 @@
   "devDependencies": {
     "@types/mime-types": "^2.1.1",
     "@types/multiparty": "^0.0.33"
-  },
-  "engine":{
-    "node":"18.0.0"
   }
 }
